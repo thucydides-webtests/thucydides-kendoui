@@ -64,7 +64,7 @@
         </dependency>
     </dependencies>
     <scm>
-        <connection>scm:git:git@gtomithub.com:thucydides-webtests/thucydides-kendoui.git</connection>
+        <connection>scm:git:git@github.com:thucydides-webtests/thucydides-kendoui.git</connection>
         <developerConnection>scm:git:git@github.com:thucydides-webtests/thucydides-kendoui.git</developerConnection>
         <url>scm:git:git@github.com:thucydides-webtests/thucydides-kendoui.git</url>
     </scm>
