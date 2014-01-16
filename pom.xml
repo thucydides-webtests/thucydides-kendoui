@@ -8,7 +8,7 @@
     </parent>
     <groupId>net.thucydides.kendoui</groupId>
     <artifactId>kendoui-support</artifactId>
-    <version>0.9.229-SNAPSHOT</version>
+    <version>0.9.230-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>thucydides-kendoui-support</name>
