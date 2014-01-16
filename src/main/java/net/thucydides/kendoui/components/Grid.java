@@ -59,7 +59,8 @@ public class Grid {
     }
 
     public void navigateToPage(int pageNumber) {
-        parentPage.findBy("#grid .k-pager-numbers").find(By.linkText(Integer.toString(pageNumber))).click();
+        parentPage.findBy("#grid .k-pager-numbers a.k-link[data-page='" + pageNumber + "']").click();
+        parentPage.waitFor(100).milliseconds();
     }
 
     public void selectRow(int row) {
