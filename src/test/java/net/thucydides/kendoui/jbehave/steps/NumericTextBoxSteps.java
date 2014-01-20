@@ -36,8 +36,13 @@ public class NumericTextBoxSteps {
     @When("I enter '$value' into the percentage field")
     public void enterPercentage(double value) {
         numericTextBoxPage.setPercentage(value);
-
     }
+
+    @When("I enter '$value' into the percentage field with a tab")
+    public void enterPercentageWithTab(double value) {
+        numericTextBoxPage.setPercentageWithTab(value);
+    }
+
 
     @Then("the percentage field should have a value of $price")
     public void percentageShouldBe(double expected) {

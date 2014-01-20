@@ -9,10 +9,12 @@ public class NumericTextBoxPage extends PageObject {
 
     NumericTextBox price;
     NumericTextBox percentage;
+    NumericTextBox percentageWithTab;
 
     public NumericTextBoxPage() {
         price = NumericTextBox.withId("currency").onPage(this);
         percentage = NumericTextBox.withId("percentage").onPage(this);
+        percentageWithTab = NumericTextBox.withId("percentage").requiresTab().onPage(this);
     }
 
     public void setPrice(double priceValue) {
@@ -25,6 +27,10 @@ public class NumericTextBoxPage extends PageObject {
 
     public void setPercentage(double priceValue) {
         percentage.setValue(priceValue);
+    }
+
+    public void setPercentageWithTab(double priceValue) {
+        percentageWithTab.setValue(priceValue);
     }
 
     public double getPercentage() {
