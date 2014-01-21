@@ -9,6 +9,11 @@ Given I am on the kendoui tree page
 When I select the Sofas entry
 Then the Sofas entry should be selected
 
+Scenario: should be able to select the root entry in a tree
+Given I am on the kendoui tree page
+When I select the entry root
+Then the Furniture entry should be selected
+
 Scenario: should be able to drag an element to another node within a tree
 Given I am on the kendoui tree page
 When I drag the Sofas entry to Decor

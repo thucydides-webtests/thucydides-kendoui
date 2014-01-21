@@ -96,6 +96,11 @@ public class Tree {
         return convert(childElements, new PropertyExtractor("text"));
     }
 
+    public void selectRoot() {
+        String firstRootElement = parentPage.getDriver().findElement(By.cssSelector("#" + id + ".k-treeview>ul>li>div")).getText();
+        selectEntry(firstRootElement);
+    }
+
     public class DragBuilder {
         private final String entryToDrag;
         private Tree sourceTree;

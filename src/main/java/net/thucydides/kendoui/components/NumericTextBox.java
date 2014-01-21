@@ -11,16 +11,10 @@ public class NumericTextBox {
 
     private final String id;
     private final PageObject parentPage;
-    private final boolean isTabRequired;
 
     private NumericTextBox(String id, PageObject parentPage) {
-        this(id, parentPage, false);
-    }
-
-    private NumericTextBox(String id, PageObject parentPage, boolean isTabRequired) {
         this.id = id;
         this.parentPage = parentPage;
-        this.isTabRequired = isTabRequired;
     }
 
     public static NumericTextBoxBuilder withId(String id) {
@@ -42,9 +36,7 @@ public class NumericTextBox {
     }
 
     private void blurInputField() {
-        if (isTabRequired) {
-            inputField().sendKeys(Keys.TAB);
-        }
+        inputField().sendKeys(Keys.TAB);
         parentPage.evaluateJavascript("$('#" + id + "').blur()");
     }
 
@@ -89,18 +81,8 @@ public class NumericTextBox {
             this.requiresTab = false;
         }
 
-        private NumericTextBoxBuilder(String id, boolean requiresTab) {
-            this.id = id;
-            this.requiresTab = requiresTab;
-        }
-
-
-        public NumericTextBoxBuilder requiresTab() {
-            return new NumericTextBoxBuilder(id, true);
-        }
-
         public NumericTextBox onPage(PageObject page) {
-            return new NumericTextBox(id, page, requiresTab);
+            return new NumericTextBox(id, page);
         }
     }
 }

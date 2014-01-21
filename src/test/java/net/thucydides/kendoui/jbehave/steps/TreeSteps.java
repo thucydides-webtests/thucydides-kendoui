@@ -45,6 +45,11 @@ public class TreeSteps {
         treePage.leftTree.selectEntry(entry);
     }
 
+    @When("I select the entry root")
+    public void selectEntryRoot() {
+        treePage.leftTree.selectRoot();
+    }
+
     @Then("the $entry entry should be selected")
     public void shouldBeSelected(String entry) {
         assertTrue(treePage.leftTree.entryIsSelected(entry));
