@@ -33,6 +33,11 @@ public class NumericTextBoxSteps {
         assertThat(numericTextBoxPage.getPrice()).isEqualTo(expected);
     }
 
+    @Then("the displayed price field should have a value of $price")
+    public void displayedPriceShouldBe(String expected) {
+        assertThat(numericTextBoxPage.getDisplayedPrice()).isEqualTo(expected);
+    }
+
     @When("I enter '$value' into the percentage field")
     public void enterPercentage(double value) {
         numericTextBoxPage.setPercentage(value);

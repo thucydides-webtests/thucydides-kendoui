@@ -25,6 +25,10 @@ public class NumericTextBoxPage extends PageObject {
         return Double.parseDouble(price.getValue());
     }
 
+    public String getDisplayedPrice() {
+        return price.getDisplayedValue();
+    }
+
     public void setPercentage(double priceValue) {
         percentage.setValue(priceValue);
     }

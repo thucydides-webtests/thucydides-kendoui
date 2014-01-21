@@ -60,6 +60,10 @@ public class NumericTextBox {
         return inputField().getAttribute("value");
     }
 
+    public String getDisplayedValue() {
+        return formattedField().getAttribute("value");
+    }
+
     private By formattedValueSelector() {
         return By.xpath(String.format("//span[input[@id='%s']]//input[contains(@class,'k-formatted-value')]",id));
     }
